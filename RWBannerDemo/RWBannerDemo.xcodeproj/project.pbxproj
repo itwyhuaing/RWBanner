@@ -137,9 +137,9 @@
 			isa = PBXGroup;
 			children = (
 				2626FFAD20AD65E100125D58 /* AppDelegate.h */,
-				2626FFAE20AD65E100125D58 /* ViewController.m */,
 				2626FFAF20AD65E100125D58 /* AppDelegate.m */,
 				2626FFB020AD65E100125D58 /* ViewController.h */,
+				2626FFAE20AD65E100125D58 /* ViewController.m */,
 			);
 			path = Main;
 			sourceTree = "<group>";
