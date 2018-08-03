@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "RWBanner"
-  s.version      = "0.0.1"
+  s.version      = "0.0.2"
   s.summary      = "OC 语言实现的轮播图功能,只需传入图片数组，复用已生成的 UIImageView ,且具有部分属性拓展功能"
   s.description  = <<-DESC
                       OC 语言实现的轮播图功能,只需传入图片数组，复用已生成的 UIImageView , 且具有部分属性拓展功能
