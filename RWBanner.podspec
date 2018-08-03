@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "RWBanner"
-  s.version      = "0.0.2"
+  s.version      = "0.0.3"
   s.summary      = "OC 语言实现的轮播图功能,只需传入图片数组，复用已生成的 UIImageView ,且具有部分属性拓展功能"
   s.description  = <<-DESC
                       OC 语言实现的轮播图功能,只需传入图片数组，复用已生成的 UIImageView , 且具有部分属性拓展功能
@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
   s.license      = "MIT"
   s.author       = { "wyhing" => "itwyhuaing@163.com" }
   s.platform     = :ios, "5.0"
-  s.source       = { :git => "https://github.com/itwyhuaing/RWBanner.git", :tag => "v#{s.version}" }
+  s.source       = { :git => "https://github.com/itwyhuaing/RWBanner.git", :tag => s.version }
   s.source_files  = "RWBanner/*.{h,m}"
   s.requires_arc = true
 
