@@ -22,6 +22,7 @@
 
 - (instancetype)initWithFrame:(CGRect)frame autoPlayTimeInterval:(NSTimeInterval)ti;
 
+// 支持 NSString 、NSURL 两种格式
 - (void)reFreshBannerViewWithDataSource:(NSArray *)dataSource;
 
 @end

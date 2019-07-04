@@ -147,8 +147,8 @@
 		2626FFB120AD65E100125D58 /* RWBanner */ = {
 			isa = PBXGroup;
 			children = (
-				2626FFB220AD65E100125D58 /* ScrollBannerView.m */,
 				2626FFB320AD65E100125D58 /* ScrollBannerView.h */,
+				2626FFB220AD65E100125D58 /* ScrollBannerView.m */,
 			);
 			path = RWBanner;
 			sourceTree = "<group>";

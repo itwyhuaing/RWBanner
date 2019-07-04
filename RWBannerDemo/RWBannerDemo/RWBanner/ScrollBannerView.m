@@ -14,20 +14,17 @@
 
 @interface ScrollBannerView () <UIScrollViewDelegate>
 
-@property (nonatomic,strong) UIScrollView *scrollView;
-@property (nonatomic,strong) UIPageControl *pageControl;
-@property (nonatomic,strong) UILabel *indexLabel;
+@property (nonatomic,strong) UIScrollView   *scrollView;
 
-@property (nonatomic,assign) CGRect selRect;
+@property (nonatomic,assign) CGRect         selRect;
 @property (nonatomic,strong) NSMutableArray *imgVArr;
 @property (nonatomic,strong) NSMutableArray *imgsData;
 
-
-@property (nonatomic,strong) NSTimer *timer;
+@property (nonatomic,strong) NSTimer        *timer;
 @property (nonatomic,assign) NSTimeInterval timeInterval;
-@property (nonatomic,assign) BOOL isManual;
+@property (nonatomic,assign) BOOL           isManual;
 
-@property (nonatomic,assign) NSInteger currentLocation;
+@property (nonatomic,assign) NSInteger      currentLocation;
 
 @end
 
@@ -39,33 +36,20 @@
     if (self) {
         
         _scrollView = [[UIScrollView alloc] initWithFrame:CGRectZero];
-        _pageControl = [[UIPageControl alloc] initWithFrame:CGRectZero];
-        _indexLabel = [[UILabel alloc] initWithFrame:CGRectZero];
         [self addSubview:_scrollView];
-        [self addSubview:_pageControl];
-        [self addSubview:_indexLabel];
         
         CGRect rect = frame;
-        rect.origin.x = 0;
-        rect.origin.y = 0;
-        [_scrollView setFrame:rect];
         _scrollView.delegate = self;
         _scrollView.pagingEnabled = YES;
         _scrollView.scrollsToTop = NO;
         _scrollView.showsHorizontalScrollIndicator = NO;
-        _pageControl.userInteractionEnabled = NO;
-        _pageControl.currentPageIndicatorTintColor = [UIColor whiteColor];
-        _pageControl.pageIndicatorTintColor = [UIColor colorWithRed:255/255.0f green:255/255.0f blue:255/255.0f alpha:0.4f];
-        _pageControl.hidden = NO;
-        _indexLabel.hidden = YES;
-        _indexLabel.font = [UIFont systemFontOfSize:15.f];
+        [_scrollView setFrame:CGRectMake(0, 0, rect.size.width, rect.size.height)];
         
         _selRect = frame;
         _timeInterval = ti;
         _isManual = NO;
         
         if (_timeInterval > 0) {
-            
             _timer = [NSTimer scheduledTimerWithTimeInterval:_timeInterval target:self selector:@selector(autoScrollToTarget:) userInfo:nil repeats:YES];
             [_timer setFireDate:[NSDate distantFuture]];
         }
